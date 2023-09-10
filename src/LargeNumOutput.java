@@ -4,7 +4,7 @@ public class LargeNumOutput {
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
-        // 기준이 되는 숫자
+        // 받은 개수
         int refNum = Integer.parseInt(scan.nextLine());
 
         // N개의 정수
@@ -13,19 +13,17 @@ public class LargeNumOutput {
         String[] numArr = inputNumbers.split(" ");
         int cnt = 0;
 
-        for(String n : numArr) {
-            int number = Integer.parseInt(n);
+        // int number = Integer.parseInt(n);
+        for(int i=1; i<numArr.length; i+=2) {
+            int frontNumber = Integer.parseInt(numArr[i-1]);
+            int backNumber = Integer.parseInt(numArr[i]);
 
-            if(number >= refNum) {
-                if(cnt == numArr.length-1) {
-                    System.out.print(number);
-                } else {
-                    System.out.print(number + " ");
-                }
+            System.out.print(frontNumber + " ");
+            if(i != numArr.length-1) {
+                if(frontNumber < backNumber) System.out.print(backNumber + " ");
+            } else {
+                if(frontNumber < backNumber) System.out.print(backNumber);
             }
-            else if(cnt == 0) System.out.print(number + " ");
-
-            cnt ++;
         }
 
     }
