@@ -11,19 +11,21 @@ public class LargeNumOutput {
         String inputNumbers = scan.nextLine();
 
         String[] numArr = inputNumbers.split(" ");
-        int cnt = 0;
 
-        // int number = Integer.parseInt(n);
-        for(int i=1; i<numArr.length; i+=2) {
-            int frontNumber = Integer.parseInt(numArr[i-1]);
-            int backNumber = Integer.parseInt(numArr[i]);
+        System.out.print(numArr[0] + " ");  // 첫 번째 수는 무조건 출력
 
-            System.out.print(frontNumber + " ");
-            if(i != numArr.length-1) {
-                if(frontNumber < backNumber) System.out.print(backNumber + " ");
-            } else {
-                if(frontNumber < backNumber) System.out.print(backNumber);
+        for(int i=1; i<refNum; i++) {  // 두 번째 수부터 시작해서
+            int currentNumber = Integer.parseInt(numArr[i]);
+            int previousNumber = Integer.parseInt(numArr[i-1]);
+
+            if(previousNumber < currentNumber) {  // 현재 수가 이전 수보다 크다면 출력
+                System.out.print(currentNumber + " ");
             }
+
+            if(i == refNum-1) {
+                System.out.println();  // 마지막은 개행 처리
+            }
+
         }
 
     }
