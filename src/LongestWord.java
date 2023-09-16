@@ -1,24 +1,26 @@
 import java.util.Scanner;
 
 public class LongestWord {
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+    public String solution(String str) {
+        String result = "";
+        // int의 최소값으로 초기화
+        int max = Integer.MIN_VALUE;
+        String[] s = str.split(" ");
 
-        String sentence = scan.nextLine();
-
-        // 띄어쓰기를 기준으로 문장 분리
-        String[] words = sentence.split(" ");
-
-        String longestWord = "";
-        int longestLength = 0;
-
-        for(int i=0; i<words.length; i++) {
-           if(words[i].length() > longestLength) {
-               longestWord = words[i];
-               longestLength = words[i].length();
-           }
+        for(String x : s) {
+            int len = x.length();
+            if(len > max) {
+                max = len;
+                result = x;
+            }
         }
+        return result;
+    }
+    public static void main(String[] args) {
+        LongestWord T = new LongestWord();
+        Scanner scan = new Scanner(System.in);
+        String str = scan.nextLine();
 
-        System.out.println("가장긴단어: " + longestWord);
+        System.out.println(T.solution(str));
     }
 }

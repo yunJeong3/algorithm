@@ -1,26 +1,34 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ReverseWord {
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+    public ArrayList<String> solution(String[] strArr) {
+        ArrayList<String> result = new ArrayList<>();
 
-        int wordsCount = scan.nextInt();
-        String word = "";
-        String reversedWord = "";
-
-        for(int i=0; i<wordsCount; i++) {
-            word = scan.next();
-            reversedWord = "";
-
-            int wordLength = word.length();
-
-            for(int j = wordLength-1 ; j>= 0; j--) {
-                reversedWord += word.charAt(j);
-            }
-
-            System.out.println(reversedWord);
+        // 문자 하나 당 전체 뒤집기
+        for(String x : strArr) {
+            // StringBuilder라는 String객체 생성 -> reverse메소드로 문자 하나하나의 순서 뒤집고
+            // -> String 으로 변환
+            String tmp = new StringBuilder(x).reverse().toString();
+            // 뒤집어진 문자 result에 담기
+            result.add(tmp);
         }
 
+        return result;
+    }
+    public static void main(String[] args) {
+        ReverseWord T = new ReverseWord();
+        Scanner scan = new Scanner(System.in);
 
+        int strLen = scan.nextInt();
+        String[] strArr = new String[strLen];
+
+        for(int i=0; i<strLen; i++) {
+            strArr[i] = scan.next();
+        }
+
+        for(String x : T.solution(strArr)) {
+            System.out.println(x);
+        }
     }
 }
