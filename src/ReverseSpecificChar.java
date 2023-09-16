@@ -1,35 +1,41 @@
 import java.util.Scanner;
 
 public class ReverseSpecificChar {
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+    public String solution(String str) {
+        String result = "";
 
-        String str = scan.next();
-        char[] arr = str.toCharArray();
+        char[] c = str.toCharArray();
+        int lt = 0, rt = c.length-1;
 
-        int minIdx = 0;
-        int maxIdx = arr.length-1;
+        // lt < rt 조건일 때만 while문 실행
+        while (lt < rt) {
 
-        while(minIdx < maxIdx) {
-            // minIdx가 특수문자일 시 idx 증가
-            if(!Character.isLetter(arr[minIdx])) {
-                minIdx++;
+            // 각각 문자가 아니면 lt++ OR rt--;
+            if(!Character.isAlphabetic(c[lt])) lt++;
+            else if(!Character.isAlphabetic(c[rt])) rt--;
+            // lt rt 중 문자가 아닌게 없으면 변환
+            else {
+                char tmp = c[lt];
+                c[lt] = c[rt];
+                c[rt] = tmp;
 
-            // maxIdx가 특수문자일 시 idx 감소
-            } else if (!Character.isLetter(arr[maxIdx])){
-                maxIdx--;
-
-            // minIdx, maxIdx 둘 다 문자일 시 각각 변경
-            } else {
-                char temp = arr[minIdx];
-                arr[minIdx] = arr[maxIdx];
-                arr[maxIdx] = temp;
-
-                minIdx++;
-                maxIdx--;
+                lt++;
+                rt--;
             }
         }
 
-        System.out.println(new String(arr));
+        str = String.valueOf(c);
+        result += str;
+
+        return result;
+    }
+    public static void main(String[] args) {
+        ReverseSpecificChar T = new ReverseSpecificChar();
+        Scanner scan = new Scanner(System.in);
+
+        String str = scan.next();
+
+        System.out.println(T.solution(str));
+
     }
 }
