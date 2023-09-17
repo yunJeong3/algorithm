@@ -20,6 +20,7 @@ public class excludeDuplicateChar {
             if(i == strIn.indexOf(strIn.charAt(i))) str.append(strIn.charAt(i));
         }
 
+
         return str.toString();
     }
     public static void main(String[] args) {
