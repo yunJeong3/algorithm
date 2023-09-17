@@ -6,6 +6,7 @@ public class PalindromeString {
         int lt = 0;
         int rt = str.length()-1;
 
+        // while문으로 반복하면서 lt rt 위치의 문자가 다르면 false 반환
         while(lt < rt) {
             if(str.charAt(lt) != str.charAt(rt)) return false;
             lt++;
