@@ -14,7 +14,7 @@ public class excludeDuplicateChar {
 //            if(!dupl) str.append(strIn.charAt(i));
 //        }
 
-        // 2. for문과 indexOf를 사용해서 i값과 indexOf로 찾은 값이 다르면 출력
+        // 2. for문과 indexOf를 사용해서 i값과 indexOf로 찾은 값이 다르면 담기
         // 시간복잡도O(N^2) 공간복잡도 O(N)
         for(int i=0; i<strIn.length(); i++) {
             if(i == strIn.indexOf(strIn.charAt(i))) str.append(strIn.charAt(i));
