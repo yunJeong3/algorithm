@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class LongestWord {
+public class LongestWord_3 {
     public String solution(String str) {
         String result = "";
         // int의 최소값으로 초기화
@@ -17,7 +17,7 @@ public class LongestWord {
         return result;
     }
     public static void main(String[] args) {
-        LongestWord T = new LongestWord();
+        LongestWord_3 T = new LongestWord_3();
         Scanner scan = new Scanner(System.in);
         String str = scan.nextLine();
 

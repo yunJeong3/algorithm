@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class ReverseWord {
+public class ReverseWord_4 {
     public ArrayList<String> solution(String[] strArr) {
         ArrayList<String> result = new ArrayList<>();
 
@@ -35,7 +35,7 @@ public class ReverseWord {
         return result;
     }
     public static void main(String[] args) {
-        ReverseWord T = new ReverseWord();
+        ReverseWord_4 T = new ReverseWord_4();
         Scanner scan = new Scanner(System.in);
 
         int strLen = scan.nextInt();

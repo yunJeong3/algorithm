@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class SearchLetter {
+public class SearchLetter_1 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         String str = scan.next().toUpperCase();

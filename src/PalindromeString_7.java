@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class PalindromeString {
+public class PalindromeString_7 {
     public boolean solution(String str) {
 
         int lt = 0;
@@ -16,7 +16,7 @@ public class PalindromeString {
     }
     public static void main(String[] args) {
         // 앞에서 읽을 때랑 뒤에서 읽을 때 같은 문자열인 회문 문자열 체크
-        PalindromeString T = new PalindromeString();
+        PalindromeString_7 T = new PalindromeString_7();
         Scanner scan = new Scanner(System.in);
         String str = scan.next().toUpperCase();
 

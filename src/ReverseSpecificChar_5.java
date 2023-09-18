@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ReverseSpecificChar {
+public class ReverseSpecificChar_5 {
     public String solution(String str) {
         String result = "";
 
@@ -30,7 +30,7 @@ public class ReverseSpecificChar {
         return result;
     }
     public static void main(String[] args) {
-        ReverseSpecificChar T = new ReverseSpecificChar();
+        ReverseSpecificChar_5 T = new ReverseSpecificChar_5();
         Scanner scan = new Scanner(System.in);
 
         String str = scan.next();

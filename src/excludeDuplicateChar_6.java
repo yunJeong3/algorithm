@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class excludeDuplicateChar {
+public class excludeDuplicateChar_6 {
     public String solution(String strIn) {
         StringBuilder str = new StringBuilder();
 
@@ -24,7 +24,7 @@ public class excludeDuplicateChar {
         return str.toString();
     }
     public static void main(String[] args) {
-        excludeDuplicateChar T = new excludeDuplicateChar();
+        excludeDuplicateChar_6 T = new excludeDuplicateChar_6();
         Scanner scan = new Scanner(System.in);
         String strIn = scan.next();
 

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class PalindromeString2 {
+public class PalindromeString2_8 {
     public boolean solution(String str) {
         StringBuilder result = new StringBuilder();
         for(char c : str.toCharArray()) {
@@ -20,7 +20,7 @@ public class PalindromeString2 {
     }
     public static void main(String[] args) {
         // 앞, 뒤에서 읽을 때 같은 문자열인지 체크
-        PalindromeString2 T = new PalindromeString2();
+        PalindromeString2_8 T = new PalindromeString2_8();
         Scanner scan = new Scanner(System.in);
 
         String str = scan.nextLine();
