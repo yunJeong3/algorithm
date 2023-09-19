@@ -1,3 +1,5 @@
+package section1;
+
 import java.util.Scanner;
 
 public class PalindromeString_7 {
