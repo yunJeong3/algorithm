@@ -2,14 +2,14 @@ import java.util.Scanner;
 
 public class CharRepeatCount_11 {
     public String solution(String str) {
-        str += " ";
         StringBuilder result = new StringBuilder();
+        // 마지막 결과값을 담기 위해 마지막은 빈칸 지정
+        str += " ";
 
         int cnt = 1;
         for(int i=0; i<str.length()-1; i++) {
-            if(str.charAt(i+1) == str.charAt(i)) {
-                cnt++;
-            } else {
+            if(str.charAt(i+1) == str.charAt(i)) cnt++;
+            else {
                 result.append(str.charAt(i));
                 if(cnt > 1) {
                     result.append(cnt);
@@ -17,7 +17,6 @@ public class CharRepeatCount_11 {
                 }
             }
         }
-
         return result.toString();
     }
     public static void main(String[] args) {
