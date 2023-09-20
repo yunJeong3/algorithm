@@ -1,25 +1,27 @@
-import java.util.ArrayList;
+package section2;
+
 import java.util.Scanner;
 
-public class DecimalCount {
+public class DecimalCount_5 {
     public int solution(int max) {
-        int resultCnt = 0;
+        int cnt = 0;
         int[] arr = new int[max+1];
 
         for(int i=2; i<=max; i++) {
-            // i번째가 0이면 count증가한다.
             if(arr[i] == 0) {
-                resultCnt++;
-                // i만큼(i의배수)돌아야함. 2의배수는 2씩 증가, 3의배수는 3씩증가
-                for(int j=i; j<=max; j=j+i) arr[j] = 1;
+                cnt++;
+                for(int j=i; j<=max; j+=i) {
+                    arr[j] = 1;
+                }
             }
         }
 
-        return resultCnt;
+
+        return cnt;
     }
     public static void main(String[] args) {
         // 에라토스테네스체를 통해 입력받은 수까지의 소수 갯수 세기.
-        DecimalCount T = new DecimalCount();
+        DecimalCount_5 T = new DecimalCount_5();
         Scanner scan = new Scanner(System.in);
 
         int max = scan.nextInt();
