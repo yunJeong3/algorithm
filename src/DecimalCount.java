@@ -7,7 +7,7 @@ public class DecimalCount {
         int[] arr = new int[max+1];
 
         for(int i=2; i<=max; i++) {
-            // i번째가 0이면 count증가.
+            // i번째가 0이면 count증가한다.
             if(arr[i] == 0) {
                 resultCnt++;
                 // i만큼(i의배수)돌아야함. 2의배수는 2씩 증가, 3의배수는 3씩증가
