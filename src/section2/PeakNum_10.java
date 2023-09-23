@@ -23,7 +23,7 @@ public class PeakNum_10 {
                 }
                 if(isTrue) {
                     cnt++;
-                    System.out.println(i + " " + j + " " + arr[i][j]);
+//                    System.out.println(i + " " + j + " " + arr[i][j]);
                 }
             }
         }
@@ -52,7 +52,5 @@ public class PeakNum_10 {
         }
 
         System.out.println(T.solution(arr, arrLen));
-
-
     }
 }
