@@ -11,7 +11,7 @@ public class MaximumSales_3 {
         result = sum;
 
         // 인덱스를 이동해주며 sum값 확인하여 result값 갱신
-        // i ~ conDays 인덱스까지 합한 값에서 i인덱스(arr[i])를 합하고 i 바로 이전인덱스(arr[i-conDays])를 뺀다.
+        // i ~ conDays 인덱스까지 합한 값에서 i인덱스(arr[i])를 합하고 i ~ conDays 범위의 바로 이전인덱스(arr[i-conDays])를 뺀다.
         for(int i=conDays; i<openDays; i++) {
             sum += (arr[i] - arr[i-conDays]);
             result = Math.max(sum, result);
@@ -25,10 +25,10 @@ public class MaximumSales_3 {
         // Scanner 객체 생성
         Scanner scan = new Scanner(System.in);
 
-        // 총 운영 일수 입력 받기
+        // openDays : 총 운영 일수 입력 받기
         int openDays = scan.nextInt();
 
-        // 최대 매출액을 구할 연속된 일수 입력 받기
+        // conDays : 최대 매출액을 구할 연속된 일수 입력 받기
         int conDays = scan.nextInt();
 
         // 배열 크기 설정 및 값 입력 받기
