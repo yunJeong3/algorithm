@@ -15,6 +15,7 @@ public class SumConsecutiveNum {
             }
         }
         return result;
+
     }
     public static void main(String[] args) {
         SumConsecutiveNum T = new SumConsecutiveNum();
