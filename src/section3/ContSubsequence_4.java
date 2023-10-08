@@ -11,22 +11,21 @@ public class ContSubsequence_4 {
          value값보다 크거나 같은 상태라면 계속 sum 에서 arr[lt] 값을 차감해줘야 한다.
         */
         int result = 0;
-
         int lt = 0;
         int sum = 0;
 
         for(int rt=0; rt<size; rt++) {
-            // rt를 계속 증가하여 sum 값에 저장
+            // rt 위치 값을 sum과 합산하여 sum에 저장
             sum += arr[rt];
 
-            // sum 값이 value값과 일치하면 result 증가
-            if(sum == value) result++;
-            // sum 이 value값과 비교 시 같거나 클때 반복
-            while(sum >= value) {
-                // sum 값에 lt 위치의 값을 차감해주고 lt 위치 이동
+            // sum 값이 value 값과 일치한다면 result count 증가
+            if (sum == value) result++;
+            // sum 값이 value값보다 작아질 때까지 while문 반복
+            while (sum >= value) {
+                // sum값 - lt위치값을 차감한 후 sum에 저장
                 sum -= arr[lt++];
-                // sum과 value 값이 같다면 result 증가
-                if(sum == value) result++;
+                // sum 과 value 일치 시 result count 증가
+                if (sum == value) result++;
             }
         }
 
