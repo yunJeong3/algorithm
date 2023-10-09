@@ -2,7 +2,7 @@ package section3;
 
 import java.util.Scanner;
 
-public class SumConsecutiveNum {
+public class SumConsecutiveNum_5 {
     public int solution(int target){
         /*
             cnt: 연속되는 자연수의 개수 (ex. 1+2: 2, 1+2+3: 3)
@@ -28,7 +28,7 @@ public class SumConsecutiveNum {
 
     }
     public static void main(String[] args) {
-        SumConsecutiveNum T = new SumConsecutiveNum();
+        SumConsecutiveNum_5 T = new SumConsecutiveNum_5();
         Scanner scan = new Scanner(System.in);
 
         // 연속된 자연수의 합으로 target을 표현하는 방법의 가짓수 구하기
