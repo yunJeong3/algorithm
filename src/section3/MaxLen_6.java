@@ -24,7 +24,6 @@ public class MaxLen_6 {
             result = Math.max(result, rt-lt+1);
         }
 
-
         return result;
     }
     public static void main(String[] args) {
