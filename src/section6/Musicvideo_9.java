@@ -7,7 +7,7 @@ public class Musicvideo_9 {
     public int countDvd(int middle, int[] songArr) {
         // count: 최소 dvd 개수 return, lt: dvd 용량 측정을 위한 합산 시작 지점, rt: dvd 용량 측정 위한 합산 끝 지점
         // sum: 용량 측정을 위한 합산 최종 크기
-        int count = 0, lt=0, rt=1, sum=songArr[lt];
+        int count = 0, lt=0, sum=songArr[lt];
         for(int i=1; i<songArr.length; i++) {
             sum += songArr[i];
             if(sum > middle) {
